@@ -7,21 +7,19 @@
 </head>
 <body>
     <h1> Dom Play</h1>
-    <p><span onclick ="highlight(this)"> </span></p>
+    <p><span onclick="highlight(this)"> text goes here </span></p>
     <script>
-        // when I want to check if a color is what I looking for this is how I can it in javescript
-        if (el.style.backgroundColor == "yellow"){ // if the color is yellow please change it to white
+       function highlight (el){
+          // when I want to check if a color is what I looking for this is how I can it in javescript
+        if(el.style.backgroundColor == "yellow"){ // if the color is yellow please change it to white
             el.style.backgroundColor = "white";
 
         }else{ //else if color is white please change it into yellow
             el.style.backgroundColor = "yellow";
         } 
-       
-       
-       
-        function highlight (el){
-           el.style.backgroundColor = "yellow";
+            //el.style.backgroundColor = "yellow";
        }
+
     </script>
 </body>
 </html>
