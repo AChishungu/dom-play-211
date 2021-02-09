@@ -3,13 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Dom play</title>
+    
+
+    <style>
+        #clickSpans span{
+            background-color: aqua;
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: 800;
+
+
+        }
+
+        body{
+            background-color: black;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: large;
+            text-align: center;
+            color: rgb(175, 39, 39);
+           
+        }
+    
+    </style>
 </head>
+
 <body>
+
     <h1> Dom Play</h1>
-    <p><span onclick="highlight(this)"> text goes here </span></p>
-    <script>
-       function highlight (el){
+    <div id="clickSpans"> 
+        <p><span data-actor="ralph"> Danny's Dad said he'd sell me
+            their old car. I got half of what
+            I need saved from the summer --
+            thought maybe </span></p>
+        <p><span data-actor="Keller"> Forget it. I'm barely getting
+            enough carpentry work to keep up
+            with the mortgage. </span></p>
+        <p><span data-actor="ralph">Why don’t you rent out Grandpa's
+            old apartment house?  </span></p>
+        <p><span data-actor="Keller" >Like I keep telling your mother,
+            it's an old building. Cost a
+            fortune to fix it up. </span></p>
+        </div>
+
+   
+   <script>
+       /*function highlight (el){
           // when I want to check if a color is what I looking for this is how I can it in javescript
         if(el.style.backgroundColor == "yellow"){ // if the color is yellow please change it to white
             el.style.backgroundColor = "white";
@@ -18,8 +56,50 @@
             el.style.backgroundColor = "yellow";
         } 
             //el.style.backgroundColor = "yellow";
-       }
+       }*/
 
+     // changed to var to make span ve globally avalvable 
+       var spans = document.querySelectorAll(" #clickSpans span");
+        for(const mySpan of spans){
+          mySpan.addEventListener("click",function(event){
+              hightlightActor(mySpan.dataset.actor)
+
+            
+            function highlight (myActor){
+                for(const mySpan of spans){
+                    if (data-actor == "keller");
+                    return pink;
+                } else{
+                }// when I want to check if a color is what I looking for this is how I can it in javescript
+          
+          
+          
+          
+          
+          
+          { if(mySpan.style.backgroundColor == "yellow"){ // if the color is yellow please change it to white
+            mySpan.style.backgroundColor = "yellow";
+
+        }else{ //else if color is white please change it into yellow
+            mySpan.style.backgroundColor = "yellow";
+        } }
+            //el.style.backgroundColor = "yellow";
+
+       //if(el.style.backgroundColor == "yellow"){ // if the color is yellow please change it to white
+           // el.style.backgroundColor = "white";
+
+      //  }else{ //else if color is white please change it into yellow
+            //el.style.backgroundColor = "yellow";
+       // } 
+            //el.style.backgroundColor = "yellow";
+       
+        }
+
+          }
+          );     
+       }
+    
+       console.log(spans);
     </script>
 </body>
 </html>
