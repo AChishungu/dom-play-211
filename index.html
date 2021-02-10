@@ -65,11 +65,15 @@
               hightlightActor(mySpan.dataset.actor)
 
             
-            function highlight (myActor){
+            function hightlightActor (myActor){
                 for(const mySpan of spans){
-                    if (data-actor == "keller");
-                    return pink;
-                } else{
+                    if (mySpan.dataset.actor.includes(myActor)){
+                        mySpan.style.backgroundColor = 'pink';
+                    }else{
+                    mySpan.style.backgroundColor = 'white';
+                   
+                } 
+
                 }// when I want to check if a color is what I looking for this is how I can it in javescript
           
           
@@ -77,12 +81,13 @@
           
           
           
-          { if(mySpan.style.backgroundColor == "yellow"){ // if the color is yellow please change it to white
-            mySpan.style.backgroundColor = "yellow";
+        //  { if(mySpan.style.backgroundColor == "yellow"){ // if the color is yellow please change it to white
+           // mySpan.style.backgroundColor = "yellow";
 
-        }else{ //else if color is white please change it into yellow
-            mySpan.style.backgroundColor = "yellow";
-        } }
+      //  }else{ //else if color is white please change it into yellow
+          //  mySpan.style.backgroundColor = "yellow";
+       // }
+     }
             //el.style.backgroundColor = "yellow";
 
        //if(el.style.backgroundColor == "yellow"){ // if the color is yellow please change it to white
@@ -95,7 +100,7 @@
        
         }
 
-          }
+          
           );     
        }
     
